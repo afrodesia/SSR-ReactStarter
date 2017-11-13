@@ -1,0 +1,28 @@
+.logo a{
+  padding-top: 30px;
+  display: flex;
+  // height: 35px;
+  width: 230px;
+  clear: both;
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+
+.logo a img{
+  width: 33px;
+  height: 33px;
+  margin-top: -8px;
+}
+.logo{
+  // border:1px solid red;
+  .name{
+    // color:red;
+  }
+  .gray{
+    color:#ccc;
+  }
+}
+
+header{
+  padding-bottom: 30px;
+}

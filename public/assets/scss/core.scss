@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import 'myer.reset.scss';
+@import 'logo';
+// @import 'Header';
+@import 'HeaderRes';
+@import 'HomeArea';
+@import 'inputs';
+
+body{
+    // font-family: 'moderneregular' !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    background: #F5F5F5;
+}
+span{ 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    font-size: 3rem;
+    color:#333;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    max-width: 55%;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    max-width: 55%;
+}
+.container{
+    margin:100px auto;
+    width:80%;
+    
+}
+.users li{
+    padding: 6px 0px;
+    list-style: circle;
+}
