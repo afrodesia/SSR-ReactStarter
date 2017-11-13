@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import  { connect } from 'react-redux'
 import { fetchAdmins } from '../actions'
 import requireAuth from '../components/hocs/requireAuth'
+import { Helmet } from 'react-helmet'
 
 class Admins extends Component{
   componentDidMount() {
@@ -16,6 +17,10 @@ class Admins extends Component{
   render(){
     return(
       <div>
+      <Helmet>
+        <title> Admin- SSR Starter </title>
+        <meta property="og:title" content="Users" />
+      </Helmet>
           <h3>Admin List</h3>
           <ul>{this.renderAdmins()}</ul>
       </div>

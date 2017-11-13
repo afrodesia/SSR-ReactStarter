@@ -5,6 +5,7 @@ import {renderRoutes } from 'react-router-config'
 import { Provider } from 'react-redux'
 import Routes from '../client/Routes'
 import serialize from 'serialize-javascript'
+import { Helmet } from 'react-helmet'
 
 
 export default (req, store, context) => {
@@ -18,6 +19,8 @@ export default (req, store, context) => {
     </Provider>
   )
 
+  const helmet = Helmet.renderStatic()
+
   return `
   <!doctype html>
   <html lang="en-US">
@@ -28,11 +31,11 @@ export default (req, store, context) => {
    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
    <meta name="description" content="" />
    <meta name="keywords" content="" />
-   
+   ${helmet.meta.toString()}
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
    <link rel="stylesheet" href="assets/css/core.css" />
-   <title>starter - ${req.path}</title>
+   ${helmet.title.toString()}
   </head>
   <body>
   

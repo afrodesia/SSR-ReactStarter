@@ -407,16 +407,28 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Home = function Home() {
   return _react2.default.createElement(
-    "div",
-    { className: "HomeArea" },
+    'div',
+    { className: 'HomeArea' },
     _react2.default.createElement(
-      "h1",
+      _reactHelmet.Helmet,
       null,
-      "The Intro to your custom splash page target area."
+      _react2.default.createElement(
+        'title',
+        null,
+        ' Home - SSR Starter '
+      ),
+      _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+    ),
+    _react2.default.createElement(
+      'h1',
+      null,
+      'The Intro to your custom splash page target area.'
     )
   );
 };
@@ -442,12 +454,24 @@ var _Content = __webpack_require__(13);
 
 var _Content2 = _interopRequireDefault(_Content);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var About = function About() {
   return _react2.default.createElement(
     'div',
     { className: '' },
+    _react2.default.createElement(
+      _reactHelmet.Helmet,
+      null,
+      _react2.default.createElement(
+        'title',
+        null,
+        ' About - SSR Starter '
+      ),
+      _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+    ),
     _react2.default.createElement(
       'h1',
       null,
@@ -515,12 +539,25 @@ var _ContactForm = __webpack_require__(15);
 
 var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import FormWrapper  from '../components/Form/FormWrapper'
 var Contact = function Contact() {
   return _react2.default.createElement(
     'div',
     { className: 'HomeArea' },
+    _react2.default.createElement(
+      _reactHelmet.Helmet,
+      null,
+      _react2.default.createElement(
+        'title',
+        null,
+        ' Contact - SSR Starter '
+      ),
+      _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+    ),
     _react2.default.createElement(
       'h1',
       null,
@@ -529,7 +566,7 @@ var Contact = function Contact() {
     _react2.default.createElement(_ContactForm2.default, null)
   );
 };
-// import FormWrapper  from '../components/Form/FormWrapper'
+
 exports.default = { component: Contact };
 
 /***/ }),
@@ -604,6 +641,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var NotFound = function NotFound(_ref) {
@@ -612,12 +651,22 @@ var NotFound = function NotFound(_ref) {
 
   staticContext.notFound = true;
   return _react2.default.createElement(
-    "div",
-    { className: "" },
+    'div',
+    { className: '' },
     _react2.default.createElement(
-      "h1",
+      _reactHelmet.Helmet,
       null,
-      "404 - Not Found"
+      _react2.default.createElement(
+        'title',
+        null,
+        ' 404! - Not Found - SSR Starter '
+      ),
+      _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+    ),
+    _react2.default.createElement(
+      'h1',
+      null,
+      '404 - Not Found'
     )
   );
 };
@@ -644,6 +693,8 @@ var _react2 = _interopRequireDefault(_react);
 var _reactRedux = __webpack_require__(2);
 
 var _actions = __webpack_require__(3);
+
+var _reactHelmet = __webpack_require__(34);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -686,6 +737,16 @@ var UsersList = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: '' },
+        _react2.default.createElement(
+          _reactHelmet.Helmet,
+          null,
+          _react2.default.createElement(
+            'title',
+            null,
+            ' Users - SSR Starter '
+          ),
+          _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+        ),
         _react2.default.createElement(
           'h1',
           null,
@@ -751,6 +812,8 @@ var _requireAuth = __webpack_require__(19);
 
 var _requireAuth2 = _interopRequireDefault(_requireAuth);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -790,6 +853,16 @@ var Admins = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
+        _react2.default.createElement(
+          _reactHelmet.Helmet,
+          null,
+          _react2.default.createElement(
+            'title',
+            null,
+            ' Admin- SSR Starter '
+          ),
+          _react2.default.createElement('meta', { property: 'og:title', content: 'Users' })
+        ),
         _react2.default.createElement(
           'h3',
           null,
@@ -1195,6 +1268,8 @@ var _serializeJavascript = __webpack_require__(26);
 
 var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
 
+var _reactHelmet = __webpack_require__(34);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (req, store, context) {
@@ -1212,7 +1287,9 @@ exports.default = function (req, store, context) {
     )
   ));
 
-  return '\n  <!doctype html>\n  <html lang="en-US">\n  <head>\n   <meta charset="UTF-8">\n   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">\n   <meta name="HandheldFriendly" content="true">\n   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">\n   <meta name="description" content="" />\n   <meta name="keywords" content="" />\n   \n   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />\n\n   <link rel="stylesheet" href="assets/css/core.css" />\n   <title>starter - ' + req.path + '</title>\n  </head>\n  <body>\n  \n  <div id="root">' + content + '</div>\n  <script>\n    window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState()) + '\n  </script>\n  <script src="assets/js/bundle.js"></script>\n  </body>\n  </html>\n  ';
+  var helmet = _reactHelmet.Helmet.renderStatic();
+
+  return '\n  <!doctype html>\n  <html lang="en-US">\n  <head>\n   <meta charset="UTF-8">\n   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">\n   <meta name="HandheldFriendly" content="true">\n   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">\n   <meta name="description" content="" />\n   <meta name="keywords" content="" />\n   ' + helmet.meta.toString() + '\n   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />\n\n   <link rel="stylesheet" href="assets/css/core.css" />\n   ' + helmet.title.toString() + '\n  </head>\n  <body>\n  \n  <div id="root">' + content + '</div>\n  <script>\n    window.INITIAL_STATE = ' + (0, _serializeJavascript2.default)(store.getState()) + '\n  </script>\n  <script src="assets/js/bundle.js"></script>\n  </body>\n  </html>\n  ';
 };
 
 /***/ }),
@@ -1383,6 +1460,12 @@ var _actions = __webpack_require__(3);
 /***/ (function(module, exports) {
 
 module.exports = require("express-http-proxy");
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-helmet");
 
 /***/ })
 /******/ ]);
