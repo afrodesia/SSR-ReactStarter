@@ -7,7 +7,10 @@
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\" ",
     "dev:build-client": "webpack --config webpack.client.js --watch",
-    "dev": "npm-run-all --parallel dev:*"
+    "dev": "npm-run-all --parallel dev:*",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
+    "build": "NODE_ENV=production webpack --config webpack.server.js -p && webpack --config webpack.client.js -p",
+    "start": "NODE_ENV=production node build/bundle.js"
   },
   "author": "",
   "license": "ISC",

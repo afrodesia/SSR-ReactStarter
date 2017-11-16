@@ -16,11 +16,20 @@ class UsersList extends Component {
       return <li key={user.id}>{user.name}</li>
     })
   }
+
+  // head(){
+  //   return(
+  //     <Helmet>
+  //       <title>  {`Users avaliable ${this.props.users.length}- SSR Starter ` }</title>
+  //       <meta property="og:title" content="Users" />
+  //     </Helmet>
+  //   )
+  // }
   render(){
     return(
       <div className="">
       <Helmet>
-        <title> Users - SSR Starter </title>
+        <title>  {`${this.props.users.length} Users avaliable - SSR Starter ` }</title>
         <meta property="og:title" content="Users" />
       </Helmet>
         <h1>User List Here</h1>

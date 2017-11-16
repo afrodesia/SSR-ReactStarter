@@ -256,6 +256,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/public\/bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/public\/bundle-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
